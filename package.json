@@ -1,0 +1,18 @@
+{
+  "name": "ts_server_template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "concurrently \"tsc --watch\" \"nodemon -r source-map-support/register build/main.js\"",
+    "start": "NODE_OPTIONS=--enable-source-maps NODE_ENV=production node -r source-map-support/register build/main.js"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.14",
+    "concurrently": "^6.5.0",
+    "nodemon": "^2.0.15",
+    "source-map-support": "^0.5.21",
+    "typescript": "^4.5.4"
+  }
+}
