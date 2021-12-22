@@ -19,4 +19,4 @@ RUN yarn install --production=true
 
 EXPOSE 8080
 
-ENTRYPOINT ["yarn", "--silent", "start"]
+ENTRYPOINT ["node", "-r", "source-map-support/register", "build/main.js"]
